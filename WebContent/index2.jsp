@@ -21,6 +21,9 @@
 </head>
 <body>
     <table>
+    		<tr>
+    			<td colspan="6">图书信息</td>
+    		</tr>
         <tr>
             <td>编号</td>
             <td>书名</td>
