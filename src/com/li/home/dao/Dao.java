@@ -8,7 +8,7 @@ public interface Dao {
 	public void insert(Book book);
 	public void update(Book book);
 	public void dalete(int bookid);
-	public String findAllBooks() throws Exception;	
+//	public String findAllBooks() throws Exception;	
 	List<Book> findAllBook() throws Exception;
 	public Book findid(int bookid);
 }

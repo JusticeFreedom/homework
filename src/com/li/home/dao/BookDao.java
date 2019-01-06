@@ -8,11 +8,11 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.google.gson.Gson;
+//import com.google.gson.Gson;
 import com.li.home.entity.*;
 
 public class BookDao extends BaseDao implements Dao {
-	public Gson gson = new Gson();
+//	public Gson gson = new Gson();
 
 	@Override
 	public void insert(Book book) {
@@ -64,26 +64,26 @@ public class BookDao extends BaseDao implements Dao {
 		}
 	}
 
-	@Override
-	public String findAllBooks() throws Exception {
-		Connection conn = BaseDao.getConnection();
-		String sql = "select * from book";
-		PreparedStatement stmt = conn.prepareStatement(sql);
-		ResultSet rs = stmt.executeQuery();
-		List<Book> bookList = new ArrayList<Book>();
-		while (rs.next()) {
-			Book book = new Book();
-			book.setBookid(rs.getInt("bookid"));
-			book.setBookname(rs.getString("bookname"));
-			book.setBookauthor(rs.getString("bookauthor"));
-			book.setBookdate(rs.getString("bookdate"));
-			bookList.add(book);
-		}
-		BookBean booksBean = new BookBean();
-		booksBean.setRows(bookList);
-		BaseDao.closeAll(conn, stmt, rs);
-		return gson.toJson(booksBean);
-	}
+//	@Override
+//	public String findAllBooks() throws Exception {
+//		Connection conn = BaseDao.getConnection();
+//		String sql = "select * from book";
+//		PreparedStatement stmt = conn.prepareStatement(sql);
+//		ResultSet rs = stmt.executeQuery();
+//		List<Book> bookList = new ArrayList<Book>();
+//		while (rs.next()) {
+//			Book book = new Book();
+//			book.setBookid(rs.getInt("bookid"));
+//			book.setBookname(rs.getString("bookname"));
+//			book.setBookauthor(rs.getString("bookauthor"));
+//			book.setBookdate(rs.getString("bookdate"));
+//			bookList.add(book);
+//		}
+//		BookBean booksBean = new BookBean();
+//		booksBean.setRows(bookList);
+//		BaseDao.closeAll(conn, stmt, rs);
+//		return gson.toJson(booksBean);
+//	}
 	
 	public List<Book> findAllBook() throws Exception {
 		Connection conn = BaseDao.getConnection();

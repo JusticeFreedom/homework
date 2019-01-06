@@ -48,7 +48,7 @@ public class Selectservlet extends HttpServlet {
 			e.printStackTrace();
 		}
 		 request.setAttribute("bookList", bookList);
-	     request.getRequestDispatcher("index2.jsp").forward(request, response);
+	     request.getRequestDispatcher("index1.jsp").forward(request, response);
 //	    PrintWriter	out = response.getWriter();
 //		out.write(json);
 //		out.close();
